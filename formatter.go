@@ -8,11 +8,11 @@ import (
 )
 
 // myFormatter 自定义日志格式
-type myFormatter struct {
+type defaultFormatter struct {
 }
 
 // Format 格式化日志
-func (f *myFormatter) Format(e *logrus.Entry) ([]byte, error) {
+func (f *defaultFormatter) Format(e *logrus.Entry) ([]byte, error) {
 	return []byte(fmt.Sprintf("%s %5.5s [%s:%v %s] %s\n",
 		e.Time.Local().Format("2006/01/02 15:04:05.000000"),
 		e.Level.String(),

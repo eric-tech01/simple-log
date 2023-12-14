@@ -3,18 +3,17 @@ package main
 import (
 	"time"
 
-	log "github.com/eric-tech01/simple-log"
+	logger "github.com/eric-tech01/simple-log"
 	"github.com/sirupsen/logrus"
 )
 
 func main() {
 
-	options := &log.Options{}
-	logger := log.New("xx_log", options)
-
+	logger.SetOptions("new_name.log", &logger.Option{})
 	go func() {
 		time.Sleep(time.Second * 5)
-		logger.Error("set level to error start")
+		logger.Errorf("set level to error start")
+		//设置日志级别
 		logger.SetLevel(logrus.ErrorLevel)
 	}()
 
