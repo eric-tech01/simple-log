@@ -112,3 +112,26 @@ func Fatalf(format string, args ...interface{}) {
 func Panicf(format string, args ...interface{}) {
 	logger.Panicf(format, args...)
 }
+
+func Debug(args ...interface{}) {
+	logger.Debug(args...)
+}
+
+func Info(args ...interface{}) {
+	logger.Info(args...)
+}
+
+func Warn(args ...interface{}) {
+	logger.Warn(args...)
+}
+
+func Error(args ...interface{}) {
+	logger.Error(args...)
+}
+func Fatal(args ...interface{}) {
+	logger.Fatal(args...)
+}
+
+func Panic(args ...interface{}) {
+	logger.Panic(args...)
+}
