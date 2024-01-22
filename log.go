@@ -135,3 +135,6 @@ func Fatal(args ...interface{}) {
 func Panic(args ...interface{}) {
 	logger.Panic(args...)
 }
+func Logger() *logrus.Logger {
+	return logger
+}
